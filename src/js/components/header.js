@@ -7,7 +7,7 @@ export default class Header {
         <nav class="navigation">
         <ul class="nav-menu" id="menu">
         <li><a class="nav-menu--item" href="#home">Главная</a></li>
-        <li><a class="nav-menu--item" href="#about">О приложении</a></li>
+        <li><a class="nav-menu--item" href="#about">О нас</a></li>
         <li><a class="nav-menu--item" href="#contacts">Контакты</a></li>
         <li><a class="nav-menu--item" href="#feedback">Обратная связь</a></li>
         </ul>

@@ -1,7 +1,11 @@
 export default class About {
     render() {
         const content = `
-          <section class="article">
+          <section class="article about">
+          <div class="col col1of2">
+          <img src="./img/question.png" alt="about">
+          </div>
+          <div class="col col1of2">
           <h2>Коротко о нас:</h2>
           <p>Приложение CallMe разработано в 2020 году и с тех пор развивается на рынке хранения данных.</p>
           <p>Мы предоставляем возможность удаленного хранения данных о Ваших контактах. В будущем будет реализована возможность резервного копирования и восстановления.</p>
@@ -13,6 +17,7 @@ export default class About {
             <li>Защита пользовательских данных;</li>
             <li>Скорость работы.</li>
           </ol>
+          </div>
           </section>
         `
         return content
