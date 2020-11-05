@@ -116,7 +116,7 @@ a {
   }
 }
 
-.home, .about, .contacts {
+.home, .about, .contacts, .feedback {
   flex-direction: row;
   justify-content: center;
   & h2 {
@@ -171,4 +171,30 @@ a {
   & h6 {
     font-size: 2rem;
   }
+}
+
+.feedback-form {
+  margin: 6rem auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  & input, button, textarea {
+    min-width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding: 1rem;
+    color: #1d1d1d;
+    font-size: 1.6rem;
+  }
+  & input, textarea {
+    margin-bottom: 2rem;
+  }
+  & textarea {
+    min-height: 54rem;
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
 }
