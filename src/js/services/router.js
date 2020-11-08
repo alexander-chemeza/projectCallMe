@@ -34,7 +34,7 @@ class RouterView {
     }
 
     static updateNavigation(currentPage) {
-        let links = document.getElementsByClassName('nav-menu--item')
+        let links = document.getElementsByClassName('nav-link')
         for(let i = 0; i < links.length; i++) {
             if(links[i].getAttribute('href').slice(1).toLowerCase() === currentPage) {
                 links[i].classList.add('active')

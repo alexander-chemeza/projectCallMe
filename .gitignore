@@ -2,4 +2,5 @@ $ cat .gitignore
 .idea/
 dist/
 node_modules/
+src/js/services/.env
 

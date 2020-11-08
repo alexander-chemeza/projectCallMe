@@ -1,21 +1,40 @@
 export default class Header {
-    constructor() {}
+    constructor() {
+    }
 
-    render () {
+    render() {
         const content = `
-        <div class="logo"><h1>CallMe</h1></div>
-        <nav class="navigation">
-        <ul class="nav-menu" id="menu">
-        <li><a class="nav-menu--item" href="#home">Главная</a></li>
-        <li><a class="nav-menu--item" href="#about">О нас</a></li>
-        <li><a class="nav-menu--item" href="#contacts">Контакты</a></li>
-        <li><a class="nav-menu--item" href="#feedback">Обратная связь</a></li>
-        </ul>
+            <nav class="navbar navbar-expand-lg navbar-light">
+            <a class="navbar-brand text-primary" href="#home">
+                <img class="logo" src="./favicon.ico" alt="logo">
+                CallMe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Главная</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">О нас</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contacts">Контакты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#feedback">Обратная связь</a>
+                    </li>
+                </ul>
+                <div class="col-sm">
+                <div class="buttons">
+                    <button type="button" class="btn btn-primary btn-sign-up">Зарегистрироваться</button>
+                    <button type="button" class="btn btn-primary btn-sign-in">Войти</button>
+                </div>
+                </div>
+            </div>
         </nav>
-        <div class="buttons">
-        <button>Зарегистрироваться</button>
-        <button>Войти</button>
-        </div>
         `
         return content;
     }
