@@ -120,7 +120,7 @@ module.exports = {
                 use: cssLoaders('sass-loader')
             },
             {
-                test: /\.(png|jpe?g|gif|ttf|woff|woff2|eot)$/i,
+                test: /\.(png|jpe?g|gif|svg|ttf|woff|woff2|eot)$/i,
                 loader: 'file-loader',
                 options: {
                     name: '[path][name].[ext]',

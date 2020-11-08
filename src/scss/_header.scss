@@ -1,5 +1,7 @@
 #header {
-  height: 7vh;
+  height: 15%;
+  position: relative;
+  z-index: 1000;
 }
 
 .navbar {
@@ -12,6 +14,8 @@
   align-items: center;
   height: 100%;
   padding: 0 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .navbar-light .navbar-nav .nav-link {
@@ -30,7 +34,7 @@
 }
 
 .nav-link {
-  transition: all .2s;
+  transition: all .5s;
 }
 
 .active {

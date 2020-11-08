@@ -1,0 +1,10 @@
+.phone {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  &__img {
+    width: 70%;
+  }
+}

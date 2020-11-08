@@ -44,14 +44,27 @@ class RouterView {
         }
     }
 
+    contentFadeIn() {
+        let timer = setInterval(() => {
+            let page = document.getElementById('page-article')
+            let opacity = Number(window.getComputedStyle(page).getPropertyValue("opacity"))
+            if(opacity < 1) {
+                opacity += 0.1
+                page.style.opacity = opacity
+            } else {
+                clearInterval(timer)
+            }
+        }, 50)
+    }
+
     render(hash) {
         let content = this.routes[hash].render()
 
         this.header.innerHTML = new Header().render()
         this.footer.innerHTML = new Footer().render()
-
         this.content.innerHTML = ''
         this.content.innerHTML = content
+
         RouterView.updateNavigation(hash)
     }
 }
@@ -68,6 +81,7 @@ class RouterModel {
     updatePage() {
         const hash = window.location.hash.slice(1).toLowerCase()
         this.view.render(hash)
+        this.view.contentFadeIn()
     }
 }
 

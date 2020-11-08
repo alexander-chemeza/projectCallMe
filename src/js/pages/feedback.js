@@ -1,16 +1,20 @@
 export default class Feedback {
     render() {
         const content = `
-            <section class="article feedback">
-            <div class="col col1of2">
-            <img src="./img/feedback.png" alt="about">
+            <section id="page-article">
+            <div class="row">
+            <div class="col feedback">
+            <img src="./img/question.svg" alt="feedback" class="feedback__img">
             </div>
-            <div class="col col1of2">
-            <form class="feedback-form" method="POST" action="/">
-            <input type="email" name="email" id="userEmail" placeholder="Введите адресс электронной почты">
-            <textarea id="userMessage" name="userMessage" rows="32" cols="50"></textarea>
-            <button type="submit">Отправить</button>
+            <div class="col">
+            <form class="feedback-form">
+            <div class="form-group">
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Введите адрес электронной почты">
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="25"></textarea>
+             <button type="submit" class="btn btn-primary btn-send">Отправить</button>
+            </div>
             </form>
+            </div>
             </div>
             </section>
         `
