@@ -107,7 +107,7 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: fileName('css'),
             'process.env.ASSET_PATH': JSON.stringify(ASSET_PATH)
-        })
+        }),
     ],
     module: {
         rules: [

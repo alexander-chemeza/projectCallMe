@@ -4,6 +4,8 @@
   z-index: 1000;
 }
 
+
+
 .navbar {
   background-color: #ecf0f1;
   border-bottom: 3px solid #007bff;
@@ -67,9 +69,11 @@
   border-radius: 10px;
 }
 
-.logo {
+
+#logo {
   margin-right: 1rem;
-  max-height: 50px;
+  width: 50px;
+  height: 50px;
 }
 
 .navbar-brand {

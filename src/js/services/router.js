@@ -1,3 +1,5 @@
+import Icon from './ico.js'
+
 /*------------*/
 /* Components */
 /*------------*/ 
@@ -64,6 +66,9 @@ class RouterView {
         this.footer.innerHTML = new Footer().render()
         this.content.innerHTML = ''
         this.content.innerHTML = content
+
+        let icons = new Icon("#2980b9", "#ecf0f1", "#bdc3c7")
+        icons.logo('logo')
 
         RouterView.updateNavigation(hash)
     }
