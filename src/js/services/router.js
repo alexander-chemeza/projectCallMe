@@ -97,7 +97,7 @@ class RouterModel {
 class RouterController {
     constructor(view, model) {
         this.view = view || new RouterView
-        this.model = model || new RouterModel()
+        this.model = model || new RouterModel(this.view)
 
         this.init()
     }
@@ -119,8 +119,8 @@ export default class Router {
     }
 
     init() {
-        const view = new RouterView()
-        const model = new RouterModel(view)
-        const controller = new RouterController(view, model)
+        const pageView = new RouterView()
+        const pageModel = new RouterModel(pageView)
+        const pageController = new RouterController(pageView, pageModel)
     }
 }

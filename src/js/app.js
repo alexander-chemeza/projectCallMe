@@ -10,5 +10,12 @@ import '../img/question.svg'
 
 
 import Router from './services/router.js';
+import modalForm from "@/js/components/modalForm";
 
 new Router()
+
+
+
+setTimeout(() => {
+    new modalForm()
+}, 1000)

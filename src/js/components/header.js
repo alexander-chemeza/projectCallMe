@@ -30,8 +30,8 @@ export default class Header {
                 </ul>
                 <div class="col-sm">
                 <div class="buttons">
-                    <button type="button" class="btn btn-primary btn-sign-up">Зарегистрироваться</button>
-                    <button type="button" class="btn btn-primary btn-sign-in">Войти</button>
+                    <button id="sign-up" type="button" class="btn btn-primary btn-sign-up">Зарегистрироваться</button>
+                    <button id="sign-in" type="button" class="btn btn-primary btn-sign-in">Войти</button>
                 </div>
                 </div>
             </div>
