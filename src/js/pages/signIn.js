@@ -9,17 +9,17 @@ export default class SignIn {
                 <h2 class="form__header">Войти</h2>
             </div>
             <div class="row">
-                <input type="email" placeholder="Введите адрес электронной почты">
+                <input class="form-control control-input" type="email" placeholder="Введите адрес электронной почты">
             </div>
             <div class="row">
-                <input type="password" placeholder="Введите пароль">
+                <input class="form-control control-input" type="password" placeholder="Введите пароль">
             </div>
             <div class="row">
                 <div class="col">
-                    <button class="btn btn-success">Войти</button>
+                    <button id="sign-in" type="submit" class="btn btn-success control-btn">Войти</button>
                 </div>
                 <div class="col">
-                    <button class="btn btn-danger">Отменить</button>
+                    <button id="btn-cancel" class="btn btn-danger control-btn">Отменить</button>
                 </div>
             </div>
         </div>

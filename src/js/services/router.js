@@ -1,4 +1,5 @@
 import Icon from './ico.js'
+import modalForm from "../components/modalForm.js"
 
 /*------------*/
 /* Components */
@@ -46,6 +47,10 @@ class RouterView {
         }
     }
 
+    toggleForm () {
+        new modalForm()
+    }
+
     contentFadeIn() {
         let timer = setInterval(() => {
             let page = document.getElementById('page-article')
@@ -87,6 +92,7 @@ class RouterModel {
         const hash = window.location.hash.slice(1).toLowerCase()
         this.view.render(hash)
         this.view.contentFadeIn()
+        this.view.toggleForm()
     }
 }
 

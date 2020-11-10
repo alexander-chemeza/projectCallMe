@@ -5,7 +5,7 @@ export default class Header {
     render() {
         const content = `
             <nav class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand text-primary" href="#home">
+            <a id="brand" class="navbar-brand text-primary" href="#home">
 <!--                <img class="logo" src="./favicon.ico" alt="logo">-->
                 <span id="logo"></span>
                 CallMe</a>
