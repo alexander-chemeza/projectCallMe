@@ -26,16 +26,48 @@ class modalFormView {
 
         this.btnCancel = null
     }
-    // Show / close modal
-    toggle (data) {
-        // Show mask
-        this.mask.classList.toggle('modal--closed')
 
+    render(data) {
         if(data === 'sign-in') {
             this.modal.innerHTML = this.forms.signIn
         } else if(data === 'sign-up') {
             this.modal.innerHTML = this.forms.signUp
         }
+    }
+
+    moveDown(startPos) {
+        let initialValue = startPos
+
+        let go = setInterval(() => {
+            let interval = 2
+            if(initialValue < -50) {
+                initialValue += interval
+                this.modal.style.transform = `translate(-50%, ${initialValue}%)`
+            } else {
+                clearInterval(go)
+            }
+        }, 20);
+    }
+
+    fadeOut() {
+        let timer = setInterval(() => {
+            let opacity = Number(window.getComputedStyle(this.modal).getPropertyValue("opacity"))
+            if(opacity > 0) {
+                opacity -= 0.1
+                this.modal.style.opacity = opacity
+                this.mask.style.opacity = opacity
+            } else {
+                clearInterval(timer)
+                this.toggle()
+            }
+        }, 50)
+    }
+
+    // Show / close modal
+    toggle () {
+        // Show mask
+        this.mask.classList.toggle('modal--closed')
+
         this.modal.classList.toggle('modal--closed')
     }
     // Save collection of form buttons
@@ -47,6 +79,12 @@ class modalFormView {
     inputs() {
         return document.getElementsByClassName('control-input')
     }
+
+    reset() {
+        this.modal.style.opacity = 1
+        this.mask.style.opacity = 1
+        this.modal.style.transform = 'translate(-50%, -225%)'
+    }
 }
 
 class modalFormModel {
@@ -54,8 +92,16 @@ class modalFormModel {
         this.view = view || new modalFormView()
     }
 
-    show(target) {
-        this.view.toggle(target)
+    show(target, pos) {
+        this.view.reset()
+        this.view.render(target)
+        this.view.moveDown(pos)
+        this.view.toggle()
+    }
+
+    closeModal() {
+        this.view.fadeOut()
+        this.view.reset()
     }
 
     getButtons() {
@@ -85,22 +131,22 @@ class modalFormController {
         let controls = this.model.getButtons()
         controls[0].addEventListener('click', (e) => {
             this.model.readInput()
-            this.model.show(e.target.getAttribute('id'))
+            this.model.closeModal()
         })
         controls[1].addEventListener('click', (e) => {
-            this.model.show(e.target.getAttribute('id'))
+            this.model.closeModal()
         })
     }
 
     init() {
         this.view.signIn.addEventListener('click', (e) => {
-            this.model.show(e.target.getAttribute('id'))
+            this.model.show(e.target.getAttribute('id'), -225)
 
             this.workWithForm()
         })
 
         this.view.signUp.addEventListener('click', (e) => {
-            this.model.show(e.target.getAttribute('id'))
+            this.model.show(e.target.getAttribute('id'), -225)
 
             this.workWithForm()
         })
