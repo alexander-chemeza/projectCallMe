@@ -3,7 +3,7 @@
 /*-----------*/
 
 const path = require('path')
-const ASSET_PATH = process.env.ASSET_PATH || './'
+const ASSET_PATH = process.env.ASSET_PATH || '/'
 const isDev = process.env.NODE_ENV === 'development'
 const isProd = process.env.NODE_ENV === 'production'
 
@@ -74,6 +74,7 @@ module.exports = {
         pages: ['./js/pages/about.js', './js/pages/contacts.js', './js/pages/error404.js', './js/pages/feedback.js', './js/pages/home.js'],
         main: ['@babel/polyfill', './js/app.js']
     },
+    devtool: 'inline-source-map',
     output: {
         filename: fileName('js'),
         publicPath: ASSET_PATH,

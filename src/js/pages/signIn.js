@@ -4,6 +4,7 @@ export default class SignIn {
 
     render() {
         const content = `
+        <form method="POST" action="/sign-in">
         <div class="form-field">
             <div class="row">
                 <h2 class="form__header">Войти</h2>
@@ -23,6 +24,7 @@ export default class SignIn {
                 </div>
             </div>
         </div>
+        </form>
         `
 
         return content
