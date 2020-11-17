@@ -27,9 +27,12 @@ export default class Header {
                     <li class="nav-item">
                         <a class="nav-link" href="#feedback">Обратная связь</a>
                     </li>
+                    <li class="nav-item" id="cabinet">
+                        <a class="nav-link" href="#cabinet">Кабинет</a>
+                    </li>
                 </ul>
                 <div class="col-sm">
-                <div class="buttons">
+                <div class="buttons" id="buttons">
                     <button id="sign-up" type="button" class="btn btn-primary btn-sign-up">Зарегистрироваться</button>
                     <button id="sign-in" type="button" class="btn btn-primary btn-sign-in">Войти</button>
                 </div>

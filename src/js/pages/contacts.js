@@ -1,12 +1,13 @@
 export default class Contacts {
     render() {
         const content = `
-            <section id="page-article" class="article contacts">
+            <section id="page-article" class="article contacts pd-top">
             <div class="row">
             <div class="col contacts">
             <img src="./img/book.svg" alt="contacts" class="contacts__img">
             </div>
             <div class="col content">
+            <h2 class="content__header text-primary">Контакты</h2>
             <div class="content__contact">
             <img class="contact__icon" src="./img/call.svg" alt="call">
             <span>+375(29)000-00-00</span>
@@ -26,19 +27,6 @@ export default class Contacts {
             <p class="content__text">Связаться со специалистом можно круглосуточно. Для этого перейдите во вкладку "Обратная связь"</p>
             </div>
             </div>
-<!--            <div class="col col1of2">-->
-<!--            <img src="./img/contacts.png" alt="contacts">-->
-<!--            </div>-->
-<!--            <div class="col col1of2">-->
-<!--            <div class="content">-->
-<!--            <p>+375(29)000-00-00</p>-->
-<!--            <p>+375(44)000-00-00</p>-->
-<!--            <p>+375(25)000-00-00</p>-->
-<!--            <p>example@mail.com</p>-->
-<!--            <p>Связаться со специалистом можно круглосуточно. Для этого перейдите во вкладку "Обратная связь"</p>-->
-<!--            </div>-->
-<!--            </div>-->
-<!--            -->
             </section>
         `
         return content

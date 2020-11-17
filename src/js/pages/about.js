@@ -1,7 +1,7 @@
 export default class About {
     render() {
         const content = `
-              <section id="page-article">
+              <section id="page-article" class="pd-top">
               <div class="row">
               <div class="col info">
               <img class="info__img" src="./img/info.png" alt="question">

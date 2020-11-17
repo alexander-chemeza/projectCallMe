@@ -1,7 +1,7 @@
 export default class Feedback {
     render() {
         const content = `
-            <section id="page-article">
+            <section id="page-article" class="pd-top">
             <div class="row">
             <div class="col feedback">
             <img src="./img/question.svg" alt="#feedback" class="feedback__img">

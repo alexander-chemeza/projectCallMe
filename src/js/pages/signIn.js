@@ -4,7 +4,7 @@ export default class SignIn {
 
     render() {
         const content = `
-        <form>
+        <form action="" method="">
         <div class="form-field">
             <div class="row">
                 <h2 class="form__header">Войти</h2>

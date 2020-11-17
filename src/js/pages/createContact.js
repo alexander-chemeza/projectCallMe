@@ -1,4 +1,4 @@
-export default class SignUp {
+export default class createContact {
     constructor() {
     }
 
@@ -7,7 +7,7 @@ export default class SignUp {
 <form>
 <div class="form-field">
             <div class="row">
-                <h2 class="form__header">Зарегистрироваться</h2>
+                <h2 class="form__header">Добавить контакт</h2>
             </div>
             <div class="row">
                 <div class="col">
@@ -21,14 +21,11 @@ export default class SignUp {
                 <input class="form-control control-input" type="email" placeholder="Введите адрес электронной почты" required>
             </div>
             <div class="row">
-                <input class="form-control control-input" type="password" placeholder="Введите пароль" required>
-            </div>
-            <div class="row">
-                <input class="form-control control-input" type="password" placeholder="Повторите пароль пароль" required>
+                <input class="form-control control-input" type="text" placeholder="Введите номер телефона" required>
             </div>
             <div class="row">
                 <div class="col">
-                    <button id="sign-up" type="submit" class="btn btn-success control-btn">Зарегистрироваться</button>
+                    <button id="sign-up" type="submit" class="btn btn-success control-btn">Сохранить</button>
                 </div>
                 <div class="col">
                     <button id="btn-cancel" class="btn btn-danger control-btn">Отменить</button>

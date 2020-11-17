@@ -1,5 +1,6 @@
 import Icon from './ico.js'
 import modalForm from "../components/modalForm.js"
+import ui from '../components/ui'
 
 /*------------*/
 /* Components */
@@ -17,6 +18,7 @@ import Contacts from '../pages/contacts.js'
 import Error404 from '../pages/error404.js'
 import Feedback from '../pages/feedback.js'
 import Home from '../pages/home.js'
+import Cabinet from "../pages/cabinet.js"
 
 /*------*/
 /* View */
@@ -29,7 +31,8 @@ class RouterView {
             'home': new Home(),
             'about': new About(),
             'contacts': new Contacts(),
-            'feedback': new Feedback()
+            'feedback': new Feedback(),
+            'cabinet': new Cabinet()
         }
         this.header = null || document.getElementById('header')
         this.content = null || document.getElementById('page')
@@ -90,6 +93,7 @@ class RouterModel {
 
     updatePage() {
         const hash = window.location.hash.slice(1).toLowerCase()
+
         this.view.render(hash)
         this.view.contentFadeIn()
         this.view.toggleForm()
@@ -110,10 +114,15 @@ class RouterController {
 
     init() {
         window.addEventListener('hashchange', () => {
+            const hash = window.location.hash.slice(1).toLowerCase()
+            if(hash === 'cabinet') {
+                new modalForm()
+            }
             this.model.updatePage()
         })
 
         window.addEventListener('load', () => {
+
             this.model.updatePage()
         })
     }

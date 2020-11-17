@@ -7,9 +7,7 @@
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "build": "cross-env NODE_ENV=production webpack --mode production",
     "watch": "cross-env NODE_ENV=development webpack --mode development --watch",
-    "server": "node ./src/js/services/server.js",
-    "wpServer": "cross-env NODE_ENV=development webpack serve",
-    "start": "npm run wpServer && npm run server"
+    "server": "node ./src/js/services/server.js"
   },
   "browserslist": "> 0.25%, not dead",
   "author": "alexander-chemeza",
@@ -42,9 +40,11 @@
     "bootstrap": "^4.5.3",
     "concurrently": "^5.3.0",
     "dotenv": "^8.2.0",
+    "firebase": "^8.0.2",
     "jquery": "^3.5.1",
     "nodemailer": "^6.4.16",
     "normalize.css": "^8.0.1",
-    "popper.js": "^1.16.1"
+    "popper.js": "^1.16.1",
+    "sha256": "^0.2.0"
   }
 }

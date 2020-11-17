@@ -1,7 +1,7 @@
 export default class Home {
     render() {
         const content = `
-            <section id="page-article">
+            <section id="page-article" class="pd-top">
             <div class="row">
             <div class="col phone">
             <img class="phone__img" src="./img/phone.svg" alt="phone">
